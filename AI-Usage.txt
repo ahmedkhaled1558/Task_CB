@@ -1,0 +1,15 @@
+ChatGPT and Claude assisted me in rephrasing sentences to make them clearer and easier to understand, as well as correcting some grammatical mistakes, especially since I was working under time pressure.
+
+They also helped support and develop my ideas in different parts of the task. 
+I faced a failure when handling the API response in Task 3.1. This helped me identify that the existing function was designed to read data from a CSV file, so I changed it to a more suitable function that could handle the API response. After the change, it worked correctly.
+
+Overall, AI tools helped me produce work that was easier, faster, and more professional.
+
+Some of the prompts I used: 
+
+"I will send you two pages automation task and a word file has my solution to that task and tell me if I forgot to cover any point mentioned in the task"
+"I receive a proxy error while running the API request as I am doing an external task on company laptop, help me stop this error from appearing"
+"I will give you paragraphs please summarize it in one page" (In the optional 5th task)
+
+
+I refused some answers from the AI as I did not want those flows. So had to rephrase some prompts in order to get the best result

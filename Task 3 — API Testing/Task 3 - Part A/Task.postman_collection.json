@@ -1,0 +1,90 @@
+{
+  "info": {
+    "_postman_id": "686549a7-f1bf-407a-9ac2-11fa5df588c6",
+    "name": "Task",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "37345330"
+  },
+  "item": [
+    {
+      "name": "3.1-Validation and Currency rates",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\npm.test(\"Response time is less than 2000ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(2000);\n});\nconst response = pm.response.json();\n\npm.test(\"Response has expected structure\", function () {\n    pm.expect(response).to.have.property(\"result\");\n    pm.expect(response).to.have.property(\"base_code\");\n    pm.expect(response).to.have.property(\"rates\");\n    pm.expect(response).to.have.property(\"provider\");\n    pm.expect(response).to.have.property(\"documentation\");\n});\n\nconst targetCurrency = pm.iterationData.get(\"target_currency\");\n\npm.test(\"Target currency exists\", function () {\n    pm.expect(response.rates).to.have.property(targetCurrency);\n});\n\npm.test(\"Target currency rate is sensible\", function () {\n    const rate = response.rates[targetCurrency];\n\n    pm.expect(rate).to.be.a(\"number\");\n    pm.expect(rate).to.be.above(0);\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/v6/latest/{{base_currency}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "v6",
+            "latest",
+            "{{base_currency}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3.2-Get currencies from csv file",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3.4-Capturing one response value",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3.4-Using the captured response value",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3.5-Negative case",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "captured_base_currency",
+      "value": ""
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+Time spent on each task.
+Task1:1h
+Task2:Around 25 mins 
+Task3:Around 50 mins
+Task4:Around 50 mins
+Task5:Around 30 mins
+
+
+My questions to business analyst/PO is all mentioned in Task 1.1
+
+
+- I could not open the reference page in the automation API because it was not attached.(Bank_Admin_Console_Demo.html) 
+

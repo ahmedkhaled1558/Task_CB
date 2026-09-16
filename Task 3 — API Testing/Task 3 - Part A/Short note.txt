@@ -1,0 +1,6 @@
+My assertions as requested in the task is to verify that the API returns a successful response, responds within an acceptable time, contains the expected response structure, and provides valid exchange-rate values.
+
+
+For the negative test, I used a wrong currency code and verify that the API returns an error. I chose this assertion because an invalid currency should not return rate data.
+
+I also capture the `base_code` from one response and reuse it in a subsequent request. I chose `base_code` because it tells me which base currency the rates are for. I capture it from the first response and use it in the next request to make sure the same base currency is used.
